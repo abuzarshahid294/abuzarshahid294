@@ -1,0 +1,49 @@
+#include<iostream>
+#include <string>
+using namespace std;
+class employee{
+	private:
+	int employee_number;
+	string employee_name;
+	int Basic_Salary;
+	int All_Allowances;
+	int IT;
+	int	Net_Salary;
+	int gross_Salary ;
+	public:
+void get_data(){
+	cout<<"Enter Employee number ";
+	cin>> employee_number;
+	cout<<"Enter Employee name ";
+	cin>> employee_name;
+	cout<<"Enter Basic salary ";	
+	cin>> Basic_Salary;
+	cout<<"Enter All allounces ";
+	cin>> All_Allowances;
+	cout<<"Enter Income Tax ";
+	cin>> IT;
+}
+int Net_salary_Calculation(){
+	Net_Salary=Basic_Salary+All_Allowances-IT;
+	return Net_Salary;
+}
+void displayInformation(){
+	cout<<endl<<"Employee number ";
+	cout<< employee_number;
+	cout<<endl<<"Employee name ";
+	cout<< employee_name;
+ 	cout<<endl<<"Basic salary ";	
+	cout<< Basic_Salary;
+	cout<<endl<<"All allounces ";
+	cout<< All_Allowances;
+	cout<<endl<<"Income Tax ";
+	cout<< IT;
+	cout<<endl<<"Net salary ";
+	cout<< Net_salary_Calculation();
+}
+};
+int main(){
+	employee e1;
+	e1.get_data();
+	e1.displayInformation();
+}
